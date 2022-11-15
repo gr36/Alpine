@@ -2,7 +2,6 @@
 @import "normalize.css";
 @import "highlight.css";
 @import "alpine.css";
-@import "nav.css";
 @import "typography.css";
 @import "post.css";
 @import "microblog.css";
@@ -66,6 +65,91 @@ body {
 
 .bio li {
 	list-style-position: outside;
+}
+
+/* Nav */
+
+nav.main-nav {
+	padding: 20px 20px 0;
+	background: #fff;
+	background: rgba(255,255,255,.90);
+	margin: 0 auto;
+	text-align: right;
+	z-index: 100;
+}
+
+nav.main-nav a {
+	top: 8px;
+	right: 6px;
+	color: #000;
+	font-size: 13px;
+	line-height: 1.35;
+	font-weight: 500;
+	margin-left: 12px;
+}
+nav.main-nav a.cta {
+	background: #fff;
+	color: #ee4792;
+	padding: 6px 14px;
+	border: 2px solid #fcdae9;
+	border-bottom: none;
+	border-radius: 20px;
+	white-space: nowrap;
+}
+
+nav.main-nav a.cta:hover {
+	background: #fcdae9;
+	color: #ee4792;
+	margin-left: 12px;
+}
+
+#wrapper {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 25px;
+}
+
+.home #avatar {
+	float: right;
+	width: 40px;
+	height: 40px;
+}
+
+
+/* Post Navigation */
+#post-nav {
+	text-align:center;
+	padding-top:20px;
+	font-size:13px;
+	font-weight:500;
+	margin-top: 40px;
+}
+
+#post-nav span {
+	position: relative;
+}
+
+#post-nav span.prev {
+	float: left;
+}
+
+#post-nav span.next {
+	float: right;
+}
+
+#post-nav span .arrow {
+	position: relative;
+	padding: 1px;
+}
+
+#post-meta img.avatar {
+  height: 36px;
+  width: 36px;
+  float: left;
+  margin-right: 15px;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 4px #eee;
+  border-radius: 50%;
+  padding: 0px;
 }
 
 /*Accent color*/
