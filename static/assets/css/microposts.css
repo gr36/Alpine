@@ -1,0 +1,91 @@
+.posts-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.list-title {
+    margin-bottom: 20px;
+}
+
+.full-post-list {
+    flex: 60%;
+}
+
+.micro-post-list {
+    flex: 10%;
+}
+
+.micro-card-list {
+    gap: 20px;
+    flex-direction: column;
+    display: flex;
+}
+
+.micro-post-card {
+    border: 1px solid #000;
+    border-radius: 11px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: #ffffff;
+}
+
+.micro-post-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.micro-post {
+    padding: 10px;
+}
+
+.micro-post img {
+    max-width: 700px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.view-more {
+    display: block;
+    margin-top: 20px;
+    max-width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 720px) {
+    .posts-wrapper {
+        flex-direction: column-reverse;
+    }
+    .micro-post-list {
+        flex-direction: column;
+    }
+    .micro-card-list {
+        left: calc(50% - 300px);
+        display: flex;
+        flex-direction: row;
+      }
+      
+      .micro-post-card {
+        display: flex;
+      /*   margin-left: -50px; */
+        transition: 0.4s ease-out;
+        position: relative;
+        left: 0px;
+      }
+      
+      .micro-post-card:not(:first-child) {
+          margin-left: -50px;
+      }
+      
+      .micro-post-card:hover {
+        transform: translateY(-20px);
+        transition: 0.4s ease-out;
+      }
+      
+      .micro-post-card:hover ~ .card {
+        position: relative;
+        left: 50px;
+        transition: 0.4s ease-out;
+      }
+}
