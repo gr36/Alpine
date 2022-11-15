@@ -74,7 +74,7 @@ nav.main-nav {
 	background: #fff;
 	background: rgba(255,255,255,.90);
 	margin: 0 auto;
-	text-align: right;
+	text-align: left;
 	z-index: 100;
 }
 
@@ -104,7 +104,7 @@ nav.main-nav a.cta:hover {
 }
 
 #wrapper {
-	max-width: 600px;
+	max-width: 1000px;
 	margin: 0 auto;
 	padding: 25px;
 }
