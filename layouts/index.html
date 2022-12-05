@@ -1,29 +1,21 @@
 {{ define "main" }}
 
-{{ $microposts := .Site.Taxonomies.categories.micro }}
-{{ $paginator := .Paginate (.Site.Taxonomies.categories.essay) 25 }}
+<ul id="post-list">
 
-<div class="posts-wrapper">
+{{ if or .IsHome .Site.Params.paginate_categories }}
+	{{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") }}
+	{{ $list := $paginator.Pages }}
+	{{ range $list  }}
+		{{ partial "post-item.html" . }}
+	{{ end }}
+{{ else }}
+	{{ $list := where .Site.Pages.ByDate.Reverse "Type" "post" }}
+	{{ range $list  }}
+		{{ partial "post-item.html" . }}
+	{{ end }}
+{{ end }}
 
-<div class="full-post-list">
-			<div class="list-title"><h2>Blog Posts</h2></div>
-  				{{ range $paginator.Pages }}
-  					{{ partial "post-item.html" . }}
-  				{{ end }}
-</div>
-
-	<div class="micro-post-list">
-		<div class="list-title"><h2>Micro Posts</h2></div>
-		<div class="micro-card-list">
-			{{ range first 3 $microposts }}
-				{{ partial "micro-item.html" . }}
-			{{ end }}
-		</div>
-		<div class="view-more"><a href="/categories/micro/">View More</a></div>
-	</div>			
-
-</div>
-
+</ul>
 
 {{ if .IsHome }}
 	{{ if .Site.Params.paginate_home }}
