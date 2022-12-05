@@ -26,6 +26,7 @@ body {
 	font: 17px "Avenir Next", Avenir, "-apple-system", Helvetica, Arial, sans-serif;
 	color: #666;
 	text-rendering: optimizeLegibility;
+	background-color: #eaeaea;
 }
 
 /* Profile */
@@ -330,10 +331,6 @@ Post List
 	margin-bottom: 0;
 }
 
-#post-list h2 {
-	margin-top: 0;
-	line-height: 1.35;
-}
 
 /* Footer */
 
