@@ -1,8 +1,22 @@
 @media (prefers-color-scheme: dark) {
 
-body {
+body, nav.main-nav {
     background-color: #282D30;
     color: whitesmoke;
+}
+
+p a {
+    color: whitesmoke;
+}
+
+nav.main-nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+h1, h2, h3, h4 {
+	color: whitesmoke;
 }
 
 }
