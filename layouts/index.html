@@ -1,16 +1,16 @@
 {{ define "main" }}
+{{ $microposts := .Site.Taxonomies.categories.micro }}
+{{ $paginator := .Paginate (.Site.Taxonomies.categories.essay) 5 }}
+
 
 <ul id="post-list">
 
 {{ if or .IsHome .Site.Params.paginate_categories }}
-	{{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") }}
-	{{ $list := $paginator.Pages }}
-	{{ range $list  }}
+	{{ range $paginator.Pages }}
 		{{ partial "post-item.html" . }}
 	{{ end }}
 {{ else }}
-	{{ $list := where .Site.Pages.ByDate.Reverse "Type" "post" }}
-	{{ range $list  }}
+{{ range $paginator.Pages }}
 		{{ partial "post-item.html" . }}
 	{{ end }}
 {{ end }}

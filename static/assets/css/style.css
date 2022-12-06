@@ -87,8 +87,8 @@ nav.main-nav a {
 	margin-left: 12px;
 }
 nav.main-nav a.cta {
-	background: #fff;
-	color: #ee4792;
+	background: var(--background);
+	color: var(--accent);
 	padding: 6px 14px;
 	border: 2px solid #fcdae9;
 	border-bottom: none;
@@ -97,8 +97,8 @@ nav.main-nav a.cta {
 }
 
 nav.main-nav a.cta:hover {
-	background: #fcdae9;
-	color: #ee4792;
+	background: var(--background);
+	color: var(--accent);
 	margin-left: 12px;
 }
 
