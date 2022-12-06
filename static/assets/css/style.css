@@ -20,6 +20,23 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	display: none;
 }
 
+div quoteback-component {
+	display: block;
+	margin-top: 20px;
+}
+
+.quoteback-container {
+	margin-top: 15px !important;
+  }
+
+  .gist-file {
+	margin-top: 15px;
+  }
+  
+  .gist-meta {
+	display: none;
+  }
+
 /* Spacing */
 .highlight, .post h1, h2, h3, p, .post-body ul, .dates, .post-body li, .bio li, video, pre ::before {
 	margin-top: 1em;
@@ -43,6 +60,8 @@ body {
 	margin: 0 auto;
 	text-align: center;
 	padding: 80px 0;
+	padding-top: 50px;
+	padding-bottom: 30px;
 }
 
 .profile #avatar {
@@ -69,11 +88,15 @@ body {
 
 /* Nav */
 
+.site-menus {
+	float: right;
+}
+
 nav.main-nav {
 	padding: 20px 20px 0;
 	background: var(--background);
 	margin: 0 auto;
-	text-align: right;
+	text-align: left;
 	z-index: 100;
 }
 
@@ -114,6 +137,30 @@ nav.main-nav a.cta:hover {
 	float: right;
 	width: 40px;
 	height: 40px;
+}
+
+.site-title {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1.35;
+	padding-left: 5px;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.site-title a {
+	vertical-align: top;
+	margin-left: 5px;
+}
+
+.site-image {
+	display: inline-block;
+	width: 26px;
+	border-radius: 13px;
+	margin-top: -5px;
 }
 
 /* Typography */
@@ -191,11 +238,11 @@ li	{ list-style-type:circle; list-style-position:inside;}
 	gap: 30px;
 }
 
-.main-post-list {
+.post-list {
 	flex: 60%;
 }
 
-.micro-post-list {
+.side-bar {
 	flex: 10%
 }
 
@@ -211,6 +258,10 @@ article ol li {
 article ul li {
 	list-style-type: disc;
 	padding-left: 20px;
+}
+
+article.post {
+	margin-top: 20px;
 }
 
 .post-body ol li {
@@ -382,17 +433,6 @@ footer #wrapper {
 	padding: 0 10px;
 }
 
-#post-meta {
-	font-size: 13px;
-	font-weight: bold;
-	line-height: 1.5;
-	border-top: 1px solid #eee;
-	padding-top: 40px;
-	padding-bottom: 40px;
-	margin-top: 60px;
-	color:#444;
-	border-bottom: 1px solid #eee;
-}
 
 #post-meta div span {
 	color: #aaa;
@@ -484,49 +524,24 @@ h2.headline {
 	-webkit-appearance: none;
 }
 
-/* Media Queries */
-@media screen and (max-width: 540px) {
+.subscribe_form input[type="text"] {
+	margin-top: 20px;
+	height: 28px;
+	border: 1px solid #DEDEDE;
+	padding-left: 5px;
+	padding-right: 5px;
+  }
+  
+  .subscribe_form input[type="submit"] {
+	height: 28px;
+	border-radius: 14px;
+	border: 1px solid #DEDEDE;
+	background-color: #EFEFEF;
+	padding-left: 15px;
+	padding-right: 15px;
+  }
 
-	footer #wrapper {
-		padding: 35px 0 60px 0;
-	}
 
-	.profile #wrapper {
-		margin: 0 auto;
-		text-align: center;
-		padding: 70px 0 40px 0;
-	}
-
-	#post-meta {
-		padding-top: 30px;
-		padding-bottom: 30px;
-		margin-top: 60px;
-	}
-
-	.post {
-		margin: 50px 0;
-	}
-
-	h1 {
-		font-size: 24px;
-	}
-
-	h2 {
-		font-size: 22px;
-	}
-
-	h3 {
-		font-size: 19px;
-	}
-
-}
-
-@media screen and (max-width: 540px) {
-	.micro-post-list{
-		
-	}
-
-}
 
 video {
 	max-width: 100%;
