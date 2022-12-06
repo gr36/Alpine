@@ -103,10 +103,12 @@ nav.main-nav a.cta:hover {
 }
 
 #wrapper {
-	max-width: 600px;
+	max-width: 1000px;
 	margin: 0 auto;
 	padding: 25px;
+	padding-top: 40px;
 }
+
 
 .home #avatar {
 	float: right;
@@ -179,6 +181,19 @@ ul 	{ margin:0; padding:0; }
 li	{ list-style-type:circle; list-style-position:inside;}
 
 /* Post */
+
+.posts-wrapper {
+	display: flex;
+	gap: 30px;
+}
+
+.main-post-list {
+	flex: 60%;
+}
+
+.micro-post-list {
+	flex: 10%
+}
 
 .post-body li:last-child {
 	margin-bottom: 1.5em;

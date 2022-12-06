@@ -3,7 +3,8 @@
 {{ $paginator := .Paginate (.Site.Taxonomies.categories.essay) 5 }}
 
 
-<ul id="post-list">
+<div class="posts-wrapper">
+<div class="main-post-list">
 
 {{ if or .IsHome .Site.Params.paginate_categories }}
 	{{ range $paginator.Pages }}
@@ -15,8 +16,21 @@
 	{{ end }}
 {{ end }}
 
-</ul>
+</div>
 
+<div class="micro-post-list">
+{{ if or .IsHome .Site.Params.paginate_categories }}
+	{{ range $microposts }}
+		{{ partial "post-item.html" . }}
+	{{ end }}
+{{ else }}
+{{ range $microposts }}
+		{{ partial "post-item.html" . }}
+	{{ end }}
+{{ end }}
+
+</div>
+</div>
 {{ if .IsHome }}
 	{{ if .Site.Params.paginate_home }}
 		{{ partial "pagination" . }}
