@@ -1,16 +1,16 @@
 <nav class="main-nav">
-
+	{{ if ne .IsHome true }}
 	<div class="site-title p-name">
 		<img src="{{ .Site.Author.avatar }}" width="25" height="25" class="site-image u-photo avatar">		
 		<a href="/" class="u-url">{{ .Site.Title }}</a>
 	</div>
+	{{ end }}
 
 	<div class="site-menus">
 
 	{{ if ne .IsHome true }}
-<!--
+
 	<a class="normal" href="/"> <span class="arrow">←</span> Home</a>
--->
 	{{ end }}
 
 	{{ range .Site.Menus.main }}
@@ -20,8 +20,6 @@
 			<a href="{{ .URL | relLangURL | safeURL }}">{{ .Name }}</a>
 		{{ end }}
 	{{ end }}
-
-	<a class="cta" href="https://micro.blog/{{ .Site.Author.username }}" rel="me">Also on Micro.blog</a>
 
 	</div>
 </nav>

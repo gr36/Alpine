@@ -129,7 +129,6 @@ nav.main-nav a.cta:hover {
 	max-width: 1000px;
 	margin: 0 auto;
 	padding: 25px;
-	padding-top: 40px;
 }
 
 
@@ -393,6 +392,14 @@ img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 5px;
+}
+
+.callout {
+	border: 1px solid;
+    padding: 30px;
+    border-radius: 11px;
+    background: #8a214429;
+    font-weight: 500;
 }
 
 /*=========================================
