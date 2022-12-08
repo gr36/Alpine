@@ -58,4 +58,13 @@
 		display: none;
 	}
 
+	.main-nav {
+		text-align: center;
+	}
+
+	.site-menus {
+		float: none;
+		text-align: center;
+	}
+
 }

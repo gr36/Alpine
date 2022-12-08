@@ -94,7 +94,6 @@ body {
 
 nav.main-nav {
 	padding: 20px 20px 0;
-	background: var(--background);
 	margin: 0 auto;
 	text-align: left;
 	z-index: 100;
