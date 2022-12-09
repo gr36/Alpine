@@ -38,7 +38,17 @@
 		<div class="advert">
 			<h2>Advert</h2>
 			<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CESI5KJI&placement=gregmorriscouk" id="_carbonads_js"></script>
+		</div>
+		<div class="currently-reading">
+			<h2>Currently Reading</h2>
+			<div class="book">
+			{{ range first 1 (.Site.Data.bookshelves.currentlyreading) }}
+				<a href="https://micro.blog/books/{{ .isbn }}">
+            <img src="{{ .cover_url }}"> <span class="bookshelf_title">{{ .title }}</span>
+				<span class="book-author">by {{ .author }}</span>
+			{{ end }}
 			</div>
+		</div>
 		<div class="categories">
 			<h2>Categories</h2>
 			{{range ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
