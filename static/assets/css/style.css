@@ -4,6 +4,7 @@
 	--accent: #AC3b61;
 	--dark-text: #fbfbfb;
 	--dark-background: #282D30;
+	--callout: #8a214429;
 }
 
 /* Reset */
@@ -397,7 +398,7 @@ img {
 	border: 1px solid;
     padding: 30px;
     border-radius: 11px;
-    background: #8a214429;
+    background: var(--callout);
     font-weight: 500;
 }
 
