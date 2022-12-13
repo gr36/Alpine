@@ -249,7 +249,7 @@ li	{ list-style-type:circle; list-style-position:inside;}
 }
 
 .sidebar h2 {
-	margin-top: 10px 0px;
+	margin: 10px 0px;
 	color: var(--accent);
 }
 
