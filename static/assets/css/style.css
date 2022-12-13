@@ -503,6 +503,12 @@ footer #wrapper {
 
 /* Others */
 
+.box {
+	padding: 10px;
+	border-radius: 11px;
+	border: 1px solid;
+}
+
 .dates {
 	font-weight: 500;
 	font-size: 13px;

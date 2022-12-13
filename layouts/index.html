@@ -19,37 +19,35 @@
 	</div>
 
 	<div class="sidebar">
-		<div class="status-box">
+		<div class="status box">
 		<h2>Current Status</h2>
 		<script src="https://status.lol/gr36.js?time&link&fluent"></script>
 		</div>
-		<div class="micro-posts">
-		<h2>Micro Blog</h2>
-		{{ if or .IsHome .Site.Params.paginate_categories }}
-			{{ range  first 3 $microposts }}
-				{{ partial "post-item.html" . }}
+		<div class="micropost box">
+			<h2>Micro Blog</h2>
+			{{ if or .IsHome .Site.Params.paginate_categories }}
+				{{ range  first 3 $microposts }}
+					{{ partial "post-item.html" . }}
+				{{ end }}
+			{{ else }}
+			{{ range $microposts }}
+					{{ partial "post-item.html" . }}
+				{{ end }}
 			{{ end }}
-		{{ else }}
-		{{ range $microposts }}
-				{{ partial "post-item.html" . }}
-			{{ end }}
-		{{ end }}
-		</div>
-		<div class="advert">
-			<h2>Advert</h2>
-			<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CESI5KJI&placement=gregmorriscouk" id="_carbonads_js"></script>
-		</div>
-		<div class="currently-reading">
-			<h2>Currently Reading</h2>
-			<div class="book">
+			</div>
+		<div class="reading box">
+			<h2>Reading</h2>
 			{{ range first 1 (.Site.Data.bookshelves.currentlyreading) }}
 				<a href="https://micro.blog/books/{{ .isbn }}">
             <img src="{{ .cover_url }}"> <span class="bookshelf_title">{{ .title }}</span>
-				<span class="book-author">by {{ .author }}</span>
+				<span class="book-author">by {{ .author }}</span></a>
 			{{ end }}
-			</div>
 		</div>
-		<div class="categories">
+		<div class="advert box">
+			<h2>Advert</h2>
+			<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CESI5KJI&placement=gregmorriscouk" id="_carbonads_js"></script>
+		</div>
+		<div class="categories box">
 			<h2>Categories</h2>
 			{{range ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
 				<div><a href="{{ .Permalink }}">{{ .Title }}</a></div>
