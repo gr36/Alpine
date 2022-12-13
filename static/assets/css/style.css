@@ -242,7 +242,15 @@ li	{ list-style-type:circle; list-style-position:inside;}
 }
 
 .sidebar {
-	flex: 10%
+	flex: 10%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.sidebar h2 {
+	margin-top: 10px 0px;
+	color: var(--accent);
 }
 
 .post-body li:last-child {
@@ -651,6 +659,10 @@ article #post-list li {
 	text-decoration: none;
 }
 
+.reading img {
+	margin-bottom: 10px;
+}
+
 .bookshelf_book {
   padding-bottom: 7px;
 }
@@ -666,9 +678,6 @@ article #post-list li {
 
 .statuslol_container {
 	margin: 30px 0px;
-    border: 1px solid;
-    border-radius: 11px;
-    padding: 20px;
 }
 
 .statuslol {
