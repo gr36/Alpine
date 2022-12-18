@@ -59,7 +59,18 @@
 	}
 
 	.mobile-callout {
-		display: block;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.mobile-microposts {
+		display:flex;
+		flex-direction: row;
+		gap: 10px
+	}
+
+	.mobile-micropost {
+		flex: 40%;
 	}
 
 	.main-nav {
