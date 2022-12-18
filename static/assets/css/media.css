@@ -89,6 +89,7 @@
 
 	.recomended-posts {
 		flex-direction: row;
+		gap: 20px;
 	}
 
 	.main-nav {

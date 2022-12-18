@@ -1,10 +1,19 @@
 {{ $related := (.Site.Taxonomies.categories.essay) 5 }}
 
-<div class="recomended box">
+<div class="recomended box ne-mobile">
     <h2>Recomended Posts</h2>
-    <div class="recomended-posts">
-    {{ range first 3 (after 1 $related) }}
-          {{ partial "summery.html" . }}
-    {{ end }}
+      <div class="recomended-posts">
+            {{ range first 3 (after 1 $related) }}
+                  {{ partial "summery.html" . }}
+            {{ end }}
       </div>
+</div>
+
+<div class="recomended box mobile">
+      <h2>Recomended Posts</h2>
+        <div class="recomended-posts">
+              {{ range first 2 (after 1 $related) }}
+                    {{ partial "summery.html" . }}
+              {{ end }}
+        </div>
 </div>

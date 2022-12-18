@@ -424,8 +424,8 @@ Post List
 }
 
 .ne-mobile {
-		display: block;
-	}
+	display: block;
+}
 
 #post-list li:last-child {
 	margin-bottom: 0;
