@@ -65,6 +65,8 @@
 	.micro-callout {
 		display: flex;
 		flex-direction: column;
+		background: var(--callout);
+		margin-bottom: 50px;
 	}
 
 	.mobile-microposts {
