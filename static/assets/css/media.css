@@ -79,6 +79,10 @@
 		flex: 40%;
 	}
 
+	.recomended {
+		flex-direction: row;
+	}
+
 	.main-nav {
 		text-align: center;
 	}

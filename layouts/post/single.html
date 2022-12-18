@@ -21,28 +21,17 @@
     {{ if .Site.Params.include_conversation }}
     <script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
     {{ end }}
+    
+    <div class="mobile-callout">
+      {{ partial "box/recomend.html" . }}
+    </div>
+
   </article>
 
   <div class="sidebar" style="margin-top:50px">
-    <div class="advert box">
-      <h2>Advert</h2>
-      <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CESI5KJI&placement=gregmorriscouk" id="_carbonads_js"></script>
-    </div>
-    <div class="recomended box">
-      <h2>Recomended Posts</h2>
-      {{ range first 3 (after 1 $related) }}
-	        {{ partial "summery.html" . }}
-      {{ end }}
-    </div>
-    <div class="reading box">
-      <h2>Reading</h2>
-      {{ range first 1 (.Site.Data.bookshelves.currentlyreading) }}
-        <a href="https://micro.blog/books/{{ .isbn }}">
-            <img src="{{ .cover_url }}"> <span class="bookshelf_title">{{ .title }}</span>
-        <span class="book-author">by {{ .author }}</span></a>
-      {{ end }}
-    </div>
-
+    {{ partial "box/advert.html" . }}
+    {{ partial "box/recomend.html" . }}
+    {{ partial "box/reading.html" . }}
   </div>
 </div>
 {{ end }}
