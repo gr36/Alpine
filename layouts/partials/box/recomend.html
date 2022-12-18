@@ -2,7 +2,9 @@
 
 <div class="recomended box">
     <h2>Recomended Posts</h2>
+    <div class="recomended-posts">
     {{ range first 3 (after 1 $related) }}
           {{ partial "summery.html" . }}
     {{ end }}
-  </div>
+      </div>
+</div>

@@ -432,6 +432,11 @@ Post List
 	flex-direction: column;
 }
 
+.recomended-posts {
+	display: flex;
+	flex-direction: column;
+}
+
 /* Footer */
 
 footer #wrapper {
