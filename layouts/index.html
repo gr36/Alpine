@@ -7,13 +7,21 @@
 	<div class="post-list">
 	<h2>Blog Post</h2>
 	{{ if or .IsHome .Site.Params.paginate_categories }}
-		{{ range $paginator.Pages }}
-			{{ partial "post-item.html" . }}
-		{{ end }}
+			{{ range first 1 $paginator.Pages }}
+				{{ partial "post-item.html" . }}
+			{{ end }}
+			{{ partial "mobile-callout.html" . }}
+			{{ range (after 1 $paginator.Pages) }}
+				{{ partial "post-item.html" . }}
+			{{ end }}
 	{{ else }}
-	{{ range $paginator.Pages }}
-			{{ partial "post-item.html" . }}
-		{{ end }}
+			{{ range first 1 $paginator.Pages }}
+				{{ partial "post-item.html" . }}
+			{{ end }}
+			{{ partial "mobile-callout.html" . }}
+			{{ range (after 1 $paginator.Pages) }}
+				{{ partial "post-item.html" . }}
+			{{ end }}
 	{{ end }}
 
 	</div>

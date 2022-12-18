@@ -419,6 +419,10 @@ Post List
 	list-style-type: none;
 }
 
+.mobile-callout {
+	display: none;
+}
+
 #post-list li:last-child {
 	margin-bottom: 0;
 }

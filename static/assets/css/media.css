@@ -58,6 +58,10 @@
 		display: none;
 	}
 
+	.mobile-callout {
+		display: block;
+	}
+
 	.main-nav {
 		text-align: center;
 	}
