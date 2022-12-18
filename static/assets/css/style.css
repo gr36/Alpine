@@ -431,11 +431,6 @@ Post List
 	margin-bottom: 0;
 }
 
-.recomended {
-	display: flex;
-	flex-direction: column;
-}
-
 .recomended-posts {
 	display: flex;
 	flex-direction: column;
