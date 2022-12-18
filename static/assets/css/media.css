@@ -59,6 +59,10 @@
 	}
 
 	.mobile-callout {
+		display: block;
+	}
+
+	.micro-callout {
 		display: flex;
 		flex-direction: column;
 	}

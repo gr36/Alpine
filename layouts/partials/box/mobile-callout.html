@@ -1,13 +1,15 @@
 {{ $microposts := .Site.Taxonomies.categories.micro }}
 
-<div class="micro-callout box">
-    <div><h2>Micro Posts</h2></div>
-    <div class="mobile-microposts">
-        {{ range first 2 $microposts }}
-            <div class="mobile-micropost">
-                {{ partial "post-item.html" . }}
-            </div>
-        {{ end }}
+<div class="mobile-callout">
+    <div class="micro-callout box">
+        <div><h2>Micro Posts</h2></div>
+        <div class="mobile-microposts">
+            {{ range first 2 $microposts }}
+                <div class="mobile-micropost">
+                    {{ partial "post-item.html" . }}
+                </div>
+            {{ end }}
+        </div>
     </div>
 </div>
 
