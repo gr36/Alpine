@@ -89,3 +89,9 @@
 	}
 
 }
+
+@media screen and (max-width: 320px) {
+	.mobile-callout {
+		display: none;
+	}
+}	
