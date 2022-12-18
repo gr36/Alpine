@@ -58,8 +58,11 @@
 		display: none;
 	}
 
-	.mobile-callout {
+	.mobile {
 		display: block;
+	}
+	.ne-mobile {
+		display: none;
 	}
 
 	.micro-callout {
@@ -77,6 +80,11 @@
 
 	.mobile-micropost {
 		flex: 40%;
+	}
+
+	.recomended {
+		background-color: var(--callout);
+		margin-top: 50px;
 	}
 
 	.recomended-posts {
