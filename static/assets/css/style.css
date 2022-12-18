@@ -434,6 +434,7 @@ Post List
 .recomended-posts {
 	display: flex;
 	flex-direction: column;
+	gap: 20px;
 }
 
 /* Footer */
