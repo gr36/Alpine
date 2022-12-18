@@ -1,3 +1,5 @@
+{{ $related := (.Site.Taxonomies.categories.essay) 5 }}
+
 <div class="recomended box">
     <h2>Recomended Posts</h2>
     {{ range first 3 (after 1 $related) }}
