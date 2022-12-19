@@ -177,6 +177,10 @@ h1 {
 	font-weight: bold;
 }
 
+.post-body h2 a, .post-body h2 a {
+	color: var(--accent);
+}
+
 h2 {
 	font-size: 25px;
 	font-weight: 600;

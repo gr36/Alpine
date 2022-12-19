@@ -4,7 +4,7 @@
 
 <div class="posts-wrapper">
 	<div class="post-list">
-	<h2>Blog Post</h2>
+	<h2>Blog Posts</h2>
 	{{ if or .IsHome .Site.Params.paginate_categories }}
 			{{ range first 1 $paginator.Pages }}
 				{{ partial "post-item.html" . }}
