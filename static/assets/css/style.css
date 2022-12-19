@@ -257,7 +257,7 @@ li	{ list-style-type:circle; list-style-position:inside;}
 	color: var(--accent);
 }
 
-.status, .micropost, .reading, .categories {
+.status, .micropost, .reading, .categories, .recomended {
 	background: var(--callout);
 }
 
@@ -316,7 +316,7 @@ sup {
 
 blockquote {
 	padding-left: 15px;
-	border-left: 2px solid #eee;
+	border-left: 2px solid var(--accent);
 	opacity: 0.8;
 	font-style: italic;
   	margin-top: 15px;
