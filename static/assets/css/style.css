@@ -245,12 +245,16 @@ li	{ list-style-type:circle; list-style-position:inside;}
 	flex: 10%;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 30px;
 }
 
 .sidebar h2 {
 	margin: 10px 0px;
 	color: var(--accent);
+}
+
+.status, .micropost, .reading, .categories {
+	background: var(--callout);
 }
 
 .post-body li:last-child {
@@ -280,12 +284,18 @@ article.post {
 }
 
 article img {
-  padding: 20px 0px 20px 0px;	
+	margin: 20px 0px;
+	max-width: 80%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	border-radius: 11px;
+	box-shadow: 0px 4px 10px rgb(0 0 0 / 20%);
 }
 
 b, strong {
 	font-weight: 500;
-  color: #1E2025;
+  	color: #1E2025;
 }
 em, i {
 	font-style: italic;
@@ -679,7 +689,9 @@ article #post-list li {
 }
 
 .reading img {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+	max-width: 80%;
+    display: block;
 }
 
 .bookshelf_book {
@@ -689,6 +701,10 @@ article #post-list li {
 .bookshelf_book img {
   margin-right: 3px;
   padding-top: 0px;
+}
+
+.bookmeta {
+	margin-bottom: 10px;;
 }
 
 .bookshelf_title {
