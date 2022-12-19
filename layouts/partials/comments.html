@@ -1,0 +1,8 @@
+<div class="comments"> 
+{{ if .Site.Params.include_conversation }}
+<h2 style="color: var(--ghost-accent-color);" >Comments</h2> via webmention
+  <script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
+<div>{{ partial "conversation-link.html" . }}</div>
+  {{ end }}
+
+</div>

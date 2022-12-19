@@ -431,6 +431,7 @@ Post List
 	margin-bottom: 0;
 }
 
+
 .recomended-posts {
 	display: flex;
 	flex-direction: column;
@@ -641,6 +642,10 @@ article #post-list li {
 }
  */
 
+
+.comments {
+	margin-bottom: 30px;
+}
 .microblog_conversation {
 	margin-top: 50px;
 	padding-top: 20px;

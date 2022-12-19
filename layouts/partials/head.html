@@ -17,7 +17,7 @@
   <link href="{{ "assets/css/media.css" | relURL }}?{{ .Site.Params.theme_seconds }}" rel="stylesheet">
   <link href="{{ "assets/css/darkmode.css" | relURL }}?{{ .Site.Params.theme_seconds }}" rel="stylesheet">
   <link href="{{ "assets/css/carbon.css" | relURL }}?{{ .Site.Params.theme_seconds }}" rel="stylesheet">
-  <link href="{{ "assets/css/normalize.css" | relURL }}?{{ .Site.Params.theme_seconds }}" rel="stylesheet">
+  {{ partial "alpine.html" . }}
   <link rel="stylesheet" href="{{ "custom.css" | relURL }}?{{ .Site.Params.theme_seconds }}">
 
 	<link rel="shortcut icon" href="https://micro.blog/{{ .Site.Author.username }}/favicon.png" type="image/x-icon" />

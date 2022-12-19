@@ -15,20 +15,19 @@
     <section class="e-content post-body">
         {{ .Content }}
     </section>
-    <div class="mobile">
-      {{ partial "box/advert.html" . }}
-    </div>
 
-    {{ if .Site.Params.include_conversation }}
-    <script type="text/javascript" src="https://micro.blog/conversation.js?url={{ .Permalink }}"></script>
-    {{ end }}
+      {{ partial "box/advert.html" . }}
+
+{{ partial "comments.html" . }}
+
+	{{ partial "box/mobile-reccomended.html" . }}
 
   </article>
 
   <div class="sidebar" style="margin-top:50px">
-    {{ partial "box/advert.html" . }}
     {{ partial "box/recomend.html" . }}
-    {{ partial "box/reading.html" . }}
+	{{ partial "box/categories.html" . }}
+
   </div>
 </div>
 {{ end }}

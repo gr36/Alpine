@@ -1,9 +1,10 @@
-{{ $related := (.Site.Taxonomies.categories.essay) 5 }}
+{{ $related := (.Site.Taxonomies.categories.essay) 20 }}
+{{ $related := shuffle $related }}
 
 <div class="recomended box ne-mobile">
-    <h2>Recomended Posts</h2>
+    <h2>You Might Also Like</h2>
       <div class="recomended-posts">
-            {{ range first 3 (after 1 $related) }}
+            {{ range first 3 $related }}
                   {{ partial "summery.html" . }}
             {{ end }}
       </div>

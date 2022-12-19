@@ -9,10 +9,15 @@
 			{{ range first 1 $paginator.Pages }}
 				{{ partial "post-item.html" . }}
 			{{ end }}
-			{{ partial "box/mobile-callout.html" . }}
-			{{ range (after 1 $paginator.Pages) }}
+			{{ partial "box/mobile-micro.html" . }}
+			{{ range first 1 (after 1 $paginator.Pages) }}
 				{{ partial "post-item.html" . }}
 			{{ end }}
+			{{ partial "box/advert.html" . }}
+			{{ range after 2 $paginator.Pages }}
+				{{ partial "post-item.html" . }}
+			{{ end }}
+
 	{{ else }}
 			{{ range first 1 $paginator.Pages }}
 				{{ partial "post-item.html" . }}
@@ -29,7 +34,6 @@
 		{{ partial "box/status.html" . }}
 		{{ partial "box/micropost.html" . }}
 		{{ partial "box/reading.html" . }}
-		{{ partial "box/advert.html" . }}
 		{{ partial "box/categories.html" . }}
 		
 	</div>

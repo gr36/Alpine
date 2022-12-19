@@ -1,22 +1,30 @@
 {
-	"version": "1.0.4",
-	"title": "Alpine theme",
-	"description": "Micro.blog's Alpine theme, similar to Marfa theme.",
-	"fields": [
-		{
-			"field": "params.alpine_accent_text_color",
-			"label": "Accent text color",
-			"type": "color"
-		},
-		{
-			"field": "params.alpine_accent_background_color",
-			"label": "Accent background color",
-			"type": "color"
-		},
-		{
-			"field": "params.alpine_hover_background_color",
-			"label": "Hover background color",
-			"type": "color"
-		}
-	]
+  "version": "1.0.0",
+  "title": "Conversation on Micro.blog",
+  "description": "Link to your post on the Micro.blog timeline from your blog.",
+  "includes": [
+    "conversation-on-mb-styles.html"
+  ],
+  "fields": [
+    {
+      "field": "params.conversation_on_mb_link_text",
+      "label": "Link text",
+      "placeholder": "✴️ Conversation on Micro.blog"
+    },
+    {
+      "field": "params.conversation_on_mb_fallback_url",
+      "label": "Fallback URL",
+      "placeholder": "https://micro.blog/you"
+    },
+    {
+      "field": "params.conversation_on_mb_fallback_link_text",
+      "label": "Fallback link text",
+      "placeholder": "✴️ Also on Micro.blog"
+    },
+    {
+      "field": "params.conversation_on_mb_show_fallback_link",
+      "label": "Show fallback link",
+      "type": "boolean"
+    }
+  ]
 }
