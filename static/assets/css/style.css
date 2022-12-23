@@ -232,7 +232,6 @@ nav.main-nav a:hover, #footer a:hover, #post-nav a:hover, p a:hover {
 
 
 ul 	{ margin:0; padding:0; }
-li	{ list-style-type:circle; list-style-position:inside;}
 
 /* Post */
 
@@ -266,12 +265,12 @@ li	{ list-style-type:circle; list-style-position:inside;}
 }
 
 article ol li {
-	list-style-type: decimal;
+	list-style-type: none;
 	padding-left: 20px;
 }  
 
 article ul li {
-	list-style-type: disc;
+	list-style-type: none;
 	padding-left: 20px;
 }
 
@@ -280,11 +279,11 @@ article.post {
 }
 
 .post-body ol li {
-	list-style-type: decimal !important;
+	list-style-type: none !important;
 }
 
 .post-body ul li {
-	list-style-type: disc !important;
+	list-style-type: none !important;
 }
 
 article img {
