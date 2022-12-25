@@ -298,7 +298,7 @@ article img {
 
 b, strong {
 	font-weight: 500;
-  	color: #1E2025;
+  	color: var(--text-color);
 }
 em, i {
 	font-style: italic;

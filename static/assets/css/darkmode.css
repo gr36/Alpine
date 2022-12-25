@@ -28,4 +28,8 @@ a {
     box-shadow: none;
 }
 
+b, strong {
+  	color: var(--dark-text);
+}
+
 }
