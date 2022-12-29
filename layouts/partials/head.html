@@ -13,6 +13,8 @@
       {{- end -}}
   </title>
 
+  {{ partial "opengraph.html" . }}
+
   <link href="{{ "assets/css/style.css" | relURL }}?{{ .Site.Params.theme_seconds }}" rel="stylesheet">
   <link href="{{ "assets/css/media.css" | relURL }}?{{ .Site.Params.theme_seconds }}" rel="stylesheet">
   <link href="{{ "assets/css/darkmode.css" | relURL }}?{{ .Site.Params.theme_seconds }}" rel="stylesheet">
@@ -29,22 +31,6 @@
       <link rel="EditURI" type="application/rsd+xml" href="{{ "rsd.xml" | absURL }}" />
     {{ end -}}
 
-	<link rel="me" href="https://micro.blog/{{ .Site.Author.username }}" />
-	{{ with .Site.Params.twitter_username }}
-		<link rel="me" href="https://twitter.com/{{ . }}" />
-	{{ end }}
-	{{ with .Site.Params.github_username }}
-		<link rel="me" href="https://github.com/{{ . }}" />
-	{{ end }}
-	{{ with .Site.Params.instagram_username }}
-		<link rel="me" href="https://instagram.com/{{ . }}" />
-	{{ end }}
-	<link rel="authorization_endpoint" href="https://micro.blog/indieauth/auth" />
-	<link rel="token_endpoint" href="https://micro.blog/indieauth/token" />
-	<link rel="micropub" href="https://micro.blog/micropub" />
-	<link rel="microsub" href="https://micro.blog/microsub" />
-	<link rel="webmention" href="https://micro.blog/webmention" />
-	<link rel="subscribe" href="https://micro.blog/users/follow" />
     {{ range .Site.Params.plugins_css }}
 	    <link rel="stylesheet" href="{{ . }}" />
     {{ end }}

@@ -674,6 +674,12 @@ article #post-list li {
 	border-radius: 10px;
 	vertical-align: top;
 	padding: 0px;
+	margin: 0px;
+	display: inline-block;
+}
+
+.microblog_fullname {
+	margin-left: 10px;
 }
 
 .microblog_text {
