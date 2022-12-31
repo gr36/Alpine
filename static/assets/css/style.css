@@ -116,6 +116,7 @@ nav.main-nav a.cta {
 	border: 2px solid #fcdae9;
 	border-bottom: none;
 	border-radius: 20px;
+	box-shadow: none;
 	white-space: nowrap;
 }
 
@@ -318,7 +319,7 @@ blockquote {
 	border-left: 2px solid var(--accent);
 	opacity: 0.8;
 	font-style: italic;
-  	margin-top: 15px;
+	margin: 25px 10px 25px 40px;
 }
 
 hr {
