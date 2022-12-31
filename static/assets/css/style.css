@@ -271,20 +271,11 @@ article ol li {
 }  
 
 article ul li {
-	list-style-type: none;
-	padding-left: 20px;
+	margin-left: 40px;
 }
 
 article.post {
 	margin-top: 20px;
-}
-
-.post-body ol li {
-	list-style-type: none !important;
-}
-
-.post-body ul li {
-	list-style-type: none !important;
 }
 
 article img {
