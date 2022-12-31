@@ -4,7 +4,7 @@
 <div class="recomended box ne-mobile">
     <h2>You Might Also Like</h2>
       <div class="recomended-posts">
-            {{ range first 3 $related }}
+            {{ range first 3 .Site.Taxonomies.categories.essay.Pages | complement .Site.Taxonomies.categories.photo.Pages }}
                   {{ partial "summery.html" . }}
             {{ end }}
       </div>
@@ -13,8 +13,9 @@
 <div class="recomended box mobile">
       <h2>Recomended Posts</h2>
         <div class="recomended-posts">
-              {{ range first 2 (after 1 $related) }}
+              {{ range first 2 (after 1 .Site.Taxonomies.categories.essay.Pages | complement .Site.Taxonomies.categories.photo.Pages) }}
                     {{ partial "summery.html" . }}
               {{ end }}
         </div>
 </div>
+
