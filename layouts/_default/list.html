@@ -1,3 +1,15 @@
 {{ define "main" }}
+{{ partial "profile.html" . }}
+<div class="posts-wrapper">
+	<div class="post-list">
   {{ partial "post-list.html" . }}
+  </div>
+  <div class="sidebar">
+		{{ partial "box/status.html" . }}
+		{{ partial "box/coffee.html" . }}
+		{{ partial "box/reading.html" . }}
+		{{ partial "box/categories.html" . }}
+		
+	</div>
+</div>
 {{ end }}
